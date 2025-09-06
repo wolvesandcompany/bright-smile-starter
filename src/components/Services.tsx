@@ -31,7 +31,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-secondary/30">
+    <section id="services" className="py-16 lg:py-24 bg-gradient-to-br from-dental-mint/30 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -52,42 +52,33 @@ const Services = () => {
             return (
               <Card 
                 key={index} 
-                className="group hover:shadow-card transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:-translate-y-2"
+                className="bg-white/90 backdrop-blur-sm border-0 shadow-card hover:shadow-hover transition-all duration-300 group"
               >
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-dental-gray leading-relaxed mb-6">
-                      {service.description}
-                    </p>
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   
-                  <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-foreground mb-4">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-dental-gray mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <ul className="space-y-2 text-sm text-dental-gray">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                        <span className="text-dental-gray">{feature}</span>
-                      </div>
+                      <li key={featureIndex} className="flex items-center">
+                        <div className="w-2 h-2 bg-dental-coral rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </CardContent>
               </Card>
             );
           })}
-        </div>
-
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center bg-white rounded-full px-6 py-3 shadow-soft">
-            <span className="text-dental-gray mr-2">Need a custom treatment plan?</span>
-            <button className="text-primary font-semibold hover:text-primary/80 transition-colors duration-300">
-              Contact us →
-            </button>
-          </div>
         </div>
       </div>
     </section>

@@ -2,114 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Dental Clinic Design System - Professional & Trustworthy */
 
 @layer base {
   :root {
-    --background: 250 100% 99%;
-    --foreground: 215 25% 27%;
+    /* Base Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 220 13% 18%;
 
-    --primary: 210 100% 56%;
+    /* Primary Colors - Deep Ocean Blue for Trust & Professionalism */
+    --primary: 210 100% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 17% 95%;
-    --secondary-foreground: 215 25% 27%;
+    /* Secondary Colors - Soft Mint Green */
+    --secondary: 160 30% 95%;
+    --secondary-foreground: 220 13% 18%;
 
-    --muted: 210 17% 95%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted Colors */
+    --muted: 160 30% 95%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 142 76% 73%;
-    --accent-foreground: 215 25% 27%;
+    /* Accent Colors - Vibrant Coral for Energy & Health */
+    --accent: 15 100% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Destructive */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 100% 56%;
+    /* UI Elements */
+    --border: 160 30% 90%;
+    --input: 160 30% 90%;
+    --ring: 210 100% 35%;
 
     --radius: 0.75rem;
     
-    /* Custom dental clinic design tokens */
-    --dental-blue: 210 100% 56%;
-    --dental-blue-light: 210 100% 85%;
-    --dental-blue-dark: 210 100% 45%;
-    --dental-green: 142 76% 73%;
-    --dental-green-dark: 142 76% 60%;
-    --dental-gray: 215 16% 47%;
-    --dental-gray-light: 210 17% 95%;
+    /* Custom Dental Clinic Design Tokens - Ocean & Coral Theme */
+    --dental-ocean: 210 100% 35%;
+    --dental-ocean-light: 210 100% 85%;
+    --dental-ocean-dark: 210 100% 20%;
+    --dental-coral: 15 100% 65%;
+    --dental-coral-dark: 15 100% 55%;
+    --dental-mint: 160 30% 85%;
+    --dental-sage: 120 20% 85%;
+    --dental-gray: 220 9% 46%;
+    --dental-gray-light: 160 30% 95%;
+    --dental-gray-dark: 220 13% 18%;
+    --dental-gold: 45 100% 60%;
+    --dental-gold-light: 45 100% 90%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--dental-blue)), hsl(var(--dental-blue-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--dental-green)), hsl(var(--dental-green-dark)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--dental-blue)) 0%, hsl(var(--dental-blue-light)) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--dental-ocean)), hsl(var(--dental-ocean-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--dental-coral)), hsl(var(--dental-coral-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--dental-ocean)) 0%, hsl(var(--dental-ocean-light)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--dental-mint)) 0%, hsl(0 0% 100%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--dental-gold)), hsl(var(--dental-gold-light)));
     
     /* Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(var(--dental-blue) / 0.1);
-    --shadow-card: 0 10px 25px -3px hsl(var(--dental-blue) / 0.1);
-    --shadow-button: 0 4px 14px 0 hsl(var(--dental-green) / 0.3);
+    --shadow-soft: 0 4px 6px -1px hsl(var(--dental-ocean) / 0.1);
+    --shadow-card: 0 10px 25px -3px hsl(var(--dental-ocean) / 0.1);
+    --shadow-button: 0 4px 14px 0 hsl(var(--dental-coral) / 0.3);
+    --shadow-hover: 0 20px 40px -10px hsl(var(--dental-ocean) / 0.15);
 
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-primary: 210 100% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 160 30% 95%;
+    --sidebar-accent-foreground: 220 13% 18%;
+    --sidebar-border: 160 30% 90%;
+    --sidebar-ring: 210 100% 35%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 13% 9%;
+    --foreground: 0 0% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 13% 9%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 13% 9%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 100% 70%;
+    --primary-foreground: 220 13% 9%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 15 100% 65%;
+    --accent-foreground: 220 13% 9%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 210 100% 70%;
+
+    --sidebar-background: 220 13% 9%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 100% 70%;
+    --sidebar-primary-foreground: 220 13% 9%;
+    --sidebar-accent: 220 13% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 13% 15%;
+    --sidebar-ring: 210 100% 70%;
   }
 }
 
@@ -120,5 +128,44 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
   }
 }

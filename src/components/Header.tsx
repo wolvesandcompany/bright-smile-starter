@@ -22,16 +22,16 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors duration-300 font-medium">
+            <a href="#home" className="text-foreground hover:text-dental-ocean transition-colors duration-300 font-medium">
               Home
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors duration-300 font-medium">
+            <a href="#services" className="text-foreground hover:text-dental-ocean transition-colors duration-300 font-medium">
               Services
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors duration-300 font-medium">
+            <a href="#about" className="text-foreground hover:text-dental-ocean transition-colors duration-300 font-medium">
               About
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors duration-300 font-medium">
+            <a href="#contact" className="text-foreground hover:text-dental-ocean transition-colors duration-300 font-medium">
               Contact
             </a>
           </nav>
@@ -51,7 +51,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:text-dental-ocean transition-colors duration-300"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -60,32 +60,32 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 py-4">
+          <div className="md:hidden border-t border-dental-gray-light py-4">
             <div className="flex flex-col space-y-4">
               <a
                 href="#home"
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                className="text-foreground hover:text-dental-ocean transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a
                 href="#services"
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                className="text-foreground hover:text-dental-ocean transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </a>
               <a
                 href="#about"
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                className="text-foreground hover:text-dental-ocean transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#contact"
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                className="text-foreground hover:text-dental-ocean transition-colors duration-300 font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

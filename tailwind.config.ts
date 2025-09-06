@@ -53,13 +53,18 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				dental: {
-					blue: 'hsl(var(--dental-blue))',
-					'blue-light': 'hsl(var(--dental-blue-light))',
-					'blue-dark': 'hsl(var(--dental-blue-dark))',
-					green: 'hsl(var(--dental-green))',
-					'green-dark': 'hsl(var(--dental-green-dark))',
+					ocean: 'hsl(var(--dental-ocean))',
+					'ocean-light': 'hsl(var(--dental-ocean-light))',
+					'ocean-dark': 'hsl(var(--dental-ocean-dark))',
+					coral: 'hsl(var(--dental-coral))',
+					'coral-dark': 'hsl(var(--dental-coral-dark))',
+					mint: 'hsl(var(--dental-mint))',
+					sage: 'hsl(var(--dental-sage))',
 					gray: 'hsl(var(--dental-gray))',
-					'gray-light': 'hsl(var(--dental-gray-light))'
+					'gray-light': 'hsl(var(--dental-gray-light))',
+					'gray-dark': 'hsl(var(--dental-gray-dark))',
+					gold: 'hsl(var(--dental-gold))',
+					'gold-light': 'hsl(var(--dental-gold-light))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -75,12 +80,15 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-accent': 'var(--gradient-accent)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-gold': 'var(--gradient-gold)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'card': 'var(--shadow-card)',
-				'button': 'var(--shadow-button)'
+				'button': 'var(--shadow-button)',
+				'hover': 'var(--shadow-hover)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

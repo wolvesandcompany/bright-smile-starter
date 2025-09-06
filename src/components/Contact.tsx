@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Navigation, ExternalLink } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +27,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-secondary/30">
+    <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-dental-gray-light/30 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -63,7 +63,7 @@ const Contact = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="border-dental-gray-light focus:border-primary focus:ring-primary"
+                      className="border-dental-gray-light focus:border-dental-ocean focus:ring-dental-ocean"
                       placeholder="Your full name"
                     />
                   </div>
@@ -78,7 +78,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="border-dental-gray-light focus:border-primary focus:ring-primary"
+                      className="border-dental-gray-light focus:border-dental-ocean focus:ring-dental-ocean"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="border-dental-gray-light focus:border-primary focus:ring-primary"
+                    className="border-dental-gray-light focus:border-dental-ocean focus:ring-dental-ocean"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="border-dental-gray-light focus:border-primary focus:ring-primary resize-none"
+                    className="border-dental-gray-light focus:border-dental-ocean focus:ring-dental-ocean resize-none"
                     placeholder="Tell us about your dental needs or questions..."
                   />
                 </div>
@@ -127,7 +127,7 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Contact Information */}
+          {/* Contact Information & Map */}
           <div className="space-y-8">
             <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-card">
               <CardContent className="p-8">
@@ -157,7 +157,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Phone</h4>
                       <p className="text-dental-gray">
-                        <a href="tel:+15551234567" className="hover:text-primary transition-colors duration-300">
+                        <a href="tel:+15551234567" className="hover:text-dental-ocean transition-colors duration-300">
                           (555) 123-4567
                         </a>
                       </p>
@@ -174,7 +174,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Email</h4>
                       <p className="text-dental-gray">
-                        <a href="mailto:info@smileharmonydental.com" className="hover:text-primary transition-colors duration-300">
+                        <a href="mailto:info@smileharmonydental.com" className="hover:text-dental-ocean transition-colors duration-300">
                           info@smileharmonydental.com
                         </a>
                       </p>
@@ -198,14 +198,71 @@ const Contact = () => {
               </CardContent>
             </Card>
             
-            {/* Map Placeholder */}
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-card">
+            {/* Enhanced Interactive Map */}
+            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-card overflow-hidden">
               <CardContent className="p-0">
-                <div className="h-64 bg-gradient-to-br from-dental-blue-light/20 to-dental-green/10 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                    <p className="text-dental-gray font-medium">Interactive Map</p>
-                    <p className="text-sm text-dental-gray mt-1">Coming Soon</p>
+                <div className="relative">
+                  {/* Map Header */}
+                  <div className="bg-gradient-primary p-4 text-white">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <MapPin className="w-5 h-5 mr-2" />
+                        <span className="font-semibold">Our Location</span>
+                      </div>
+                      <div className="text-sm opacity-90">
+                        Smile Harmony Dental
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Google Maps Embed */}
+                  <div className="relative">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2156!2d-74.0059!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuMiJX!5e0!3m2!1sen!2sus!4v1234567890"
+                      width="100%"
+                      height="350"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="w-full"
+                      title="Smile Harmony Dental Location"
+                    />
+                    
+                    {/* Map Overlay Controls */}
+                    <div className="absolute top-4 right-4 space-y-2">
+                      <a
+                        href="https://www.google.com/maps/dir/?api=1&destination=123+Smile+Avenue+Harmony+District+New+York+NY+10001"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-dental-ocean text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-dental-ocean-dark transition-colors duration-300 flex items-center shadow-lg"
+                      >
+                        <Navigation className="w-4 h-4 mr-2" />
+                        Get Directions
+                      </a>
+                      <a
+                        href="https://www.google.com/maps/place/123+Smile+Avenue,+Harmony+District,+New+York,+NY+10001"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white text-dental-ocean px-4 py-2 rounded-lg text-sm font-medium hover:bg-dental-gray-light transition-colors duration-300 flex items-center shadow-lg"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        View on Maps
+                      </a>
+                    </div>
+                  </div>
+                  
+                  {/* Map Footer */}
+                  <div className="bg-dental-gray-light/50 p-4">
+                    <div className="flex items-center justify-between text-sm text-dental-gray">
+                      <div className="flex items-center">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        <span>123 Smile Avenue, New York, NY 10001</span>
+                      </div>
+                      <div className="text-dental-coral font-medium">
+                        Free Parking Available
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
